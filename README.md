@@ -26,6 +26,7 @@ mv apikey.py.sample apikey.py
 nano apikey.py
 ```
 
+* unit = "metric"
 * api_key = 'your openweathermap API Key'
 * lat="your latitude"
 * lon="your longtitude"
