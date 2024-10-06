@@ -124,13 +124,13 @@ if (day_lists_not_identical(days, old_days)):
        name = path+"/icons/wi-"
        name += general_map[inky_list[i].id]
        
-       #Icon handling and placement
+       # Icon handling and placement
        icon = get_icon(name)
        x = tile_positions[i][0] + (TILE_WIDTH - ICON_SIZE) // 2
        y = tile_positions[i][1]
        img.paste(icon, (x, y))
        
-       #Pop string placement
+       # Pop string placement
        text = str(int(100 * inky_list[i].pop)) + "%"
        left, top, right, bottom = font.getbbox(text)
        text_width = right - left
@@ -139,19 +139,19 @@ if (day_lists_not_identical(days, old_days)):
        y = tile_positions[i][1] + ICON_SIZE + SPACE
        draw.text((x, y), text, percipitation_colour, font)
        
-       #Temp string placement
+       # Temp string placement
        text = str(inky_list[i].temp) + "°"
        x = tile_positions[i][0] + (TILE_WIDTH - text_width) // 2
        y += FONT_SIZE
        draw.text((x, y), text, colours[4], font)
        
-       #Windspeed string placement
-       text = str(inky_list[i].temp) + " m/s"
+       # Windspeed string placement
+       text = str(inky_list[i].speed) + " m/s"
        x = tile_positions[i][0] + (TILE_WIDTH - text_width) // 2
        y += FONT_SIZE
        draw.text((x, y), text, colours[3], font)
        
-       #WeatherDescription string placement
+       # WeatherDescription string placement
        text = str(inky_list[i].description)
        left, top, right, bottom = smallfont.getbbox(text)
        text_width = right - left
@@ -160,7 +160,7 @@ if (day_lists_not_identical(days, old_days)):
        y += FONT_SIZE
        draw.text((x, y), text, colours[3], smallfont)
        
-       #Takes dt parameter and converts it from unixtime to name of the day
+       # Takes dt parameter and converts it from unixtime to name of the day
        ts = time.gmtime(inky_list[i].dt)
        day_name = time.strftime("%a", ts)
        text = day_name
@@ -171,7 +171,7 @@ if (day_lists_not_identical(days, old_days)):
        y += FONT_SIZE
        draw.text((x, y), text, colours[2], font)
        
-       #Takes dt parameter and converts it from unixtime to time
+       # Takes dt parameter and converts it from unixtime to time
        ts = time.gmtime(inky_list[i].dt)
        day_name = time.strftime("%H:%M", ts)
        text = day_name
