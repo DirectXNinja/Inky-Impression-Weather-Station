@@ -1,13 +1,10 @@
 # Small fork of  / Inky-Impression-Weather-Station
 [vwillcox](https://github.com/vwillcox/Inky-Impression-Weather-Station)
 
-# Inky Impression Weather Station
-
-Inky Impression eInk display from Pimoroni driven by a Raspberry Pi Zero (or any other Raspberry Pi) to display a seven day weather forecast.
-
-Based on the original work by [Rainer Bunger](https://github.com/rbunger/Inky-wHAT-Weather-Station)
-
-![Example Screenshot](https://talktech.info/wp-content/uploads/2023/05/IMG_20230527_174858.jpg)
+# convert the pictures to correct format
+cd icons/
+7za x erik_flowers_weather-icons.7z
+mogrify -background white -size 200x200 -format PNG8 *.svg
 
 ## Getting Weather information
 
