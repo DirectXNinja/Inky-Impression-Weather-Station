@@ -3,7 +3,9 @@
 
 # convert the pictures to correct format
 cd icons/
+
 7za x erik_flowers_weather-icons.7z
+
 mogrify -background white -size 200x200 -format PNG8 *.svg
 
 ## Getting Weather information
